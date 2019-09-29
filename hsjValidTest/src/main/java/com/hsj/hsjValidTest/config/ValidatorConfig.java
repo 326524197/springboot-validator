@@ -21,17 +21,16 @@ public class ValidatorConfig {
                 .buildValidatorFactory();
         return factory.getValidator();
     }
-    
+
     /**
-     * 
-    * @Title: methodValidationPostProcessor  
-    * @Description: TODO(   ①参数校验(方法参数),实例化MethodValidationPostProcessor拦截器,
-    * 						②在所要实现方法参数校验的类上面添加@Validated
-    * 						③在方法上面添加校验规则
-    * 						④当方法上面的参数校验失败,spring 框架就回抛出异常javax.validation.ConstraintViolationException)  
-    * @param @return    参数  
-    * @return MethodValidationPostProcessor    返回类型  
-    * @throws
+     * @param @return 参数
+     * @return MethodValidationPostProcessor    返回类型
+     * @throws
+     * @Title: methodValidationPostProcessor
+     * @Description: TODO(① 参数校验 ( 方法参数), 实例化MethodValidationPostProcessor拦截器,
+     * ②在所要实现方法参数校验的类上面添加@Validated
+     * ③在方法上面添加校验规则
+     * ④当方法上面的参数校验失败,spring 框架就回抛出异常javax.validation.ConstraintViolationException)
      */
     @Bean
     public MethodValidationPostProcessor methodValidationPostProcessor() {
