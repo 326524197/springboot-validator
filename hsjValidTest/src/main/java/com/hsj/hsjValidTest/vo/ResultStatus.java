@@ -6,8 +6,8 @@ public enum ResultStatus {
     NOT_FOUND(400001, "找不到页面"),
     Username_not_null(500002, "用户名不能为空"),
     ERROR(500001, "服务器出错"),
-
-    param_error(20101, "参数错误");
+    exam_param_error(20101, "参数错误"),
+    game_param_error(20201, "参数错误");
 
     private final int code;
     private final String reasonPhrase;
