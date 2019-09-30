@@ -38,7 +38,7 @@ public class GlobalExceptionHandler {
     public JSONResultWrapper validationErrorHandler(MethodArgumentNotValidException ex) {
         // 同样是获取BindingResult对象，然后获取其中的错误信息
         // 如果前面开启了fail_fast，事实上这里只会有一个信息
-        LOGGER.info("校验异常=MethodArgumentNotValidException.class:" + serviceName);
+        LOGGER.info("校验异常MethodArgumentNotValidException.class:" + serviceName);
         // 如果没有，则可能又多个
         List<String> errorInformation = ex.getBindingResult().getAllErrors().stream()
                 .map(ObjectError::getDefaultMessage).collect(Collectors.toList());
